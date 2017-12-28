@@ -4,16 +4,16 @@ NodeJS app to generate Timetable in ICal format.
 
 ## How to use
 
-1. Install NodeJS from [here](https://nodejs.org/en/download/).
-1. Clone this repository
+* Install NodeJS from [here](https://nodejs.org/en/download/).
+* Clone this repository
   ```sh
   $ git clone https://github.com/prateekkumarweb/timetableiith.git
   ```
-1. Install the required packages
+* Install the required packages
   ```sh
   $ npm install
   ```
-1. Edit the files `slots.yaml`, `courses.yaml` and `segments.json`.
+* Edit the files `slots.yaml`, `courses.yaml` and `segments.json`.
   Note that `segments.yaml` is of this format:
   ```json
   [
@@ -25,7 +25,7 @@ NodeJS app to generate Timetable in ICal format.
     ["segment6 start date", "segement6 end date"]
   ]
   ```
-1. Run the program
+* Run the program
   ```sh
   $ node index.js
   ```
