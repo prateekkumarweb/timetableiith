@@ -13,7 +13,7 @@ let findStartAndEndTime = (date, day, times) => {
 	day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursady', 'Friday', 'Saturday'].indexOf(day)
 	date.setDate(date.getDate() + (day+7-date.getDay())%7)
 	let start = times[0].split(':')
-	let end = times[0].split(':')
+	let end = times[1].split(':')
 	return [
 		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(start[0]), Number(start[1]), 0, 0),
 		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(end[0]), Number(end[1]), 0, 0)
