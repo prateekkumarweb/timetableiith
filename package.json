@@ -1,0 +1,23 @@
+{
+  "name": "timetableiith",
+  "version": "1.0.0",
+  "description": "Timetable @ IITH",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prateekkumarweb/timetableiith.git"
+  },
+  "author": "Prateek Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prateekkumarweb/timetableiith/issues"
+  },
+  "homepage": "https://github.com/prateekkumarweb/timetableiith#readme",
+  "dependencies": {
+    "ical-generator": "^0.2.10",
+    "yamljs": "^0.3.0"
+  }
+}
