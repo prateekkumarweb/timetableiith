@@ -34,10 +34,25 @@ This creates a `tt.ical` file which can be imported into [Google Calendar](https
 
 ### How to keep the ICal file in sync with Google Calendar
 
-1. Fork this repository, make required changes and host the site using github pages.
-1. Next, in Google Calendar, click the **+** button below the overview month calendar and select **From URL**.
-1. Enter the URL of the hosted ical file and add the calendar.
-1. This will update the calendar whenever a change is made by pushing changes to the repository.
+* Fork this repository, make required changes and host the site using github pages.
+* Next, in Google Calendar, click the **+** button below the overview month calendar and select **From URL**.
+* Enter the URL of the hosted ical file and add the calendar.
+* This will update the calendar whenever a change is made by pushing changes to the repository.
+
+
+### Add pre-commit to Git so that `tt.ical` can be generated before committing
+
+* Create a new file at `.git/hooks/pre-commit` with following content.
+  ```sh
+  #!/bin/sh
+  node index.js
+  git add tt.ical
+  ```
+* Change persimissions of the hook file.
+  ```sh
+  $ chmod +x .git/hooks/pre-commit
+  ```
+* After you commit, `tt.ical` will be auto generated and added to git.
 
 ---
 LICENSE: MIT
