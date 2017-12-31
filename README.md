@@ -55,4 +55,9 @@ This creates a `tt.ical` file which can be imported into [Google Calendar](https
 * After you commit, `tt.ical` will be auto generated and added to git.
 
 ---
-LICENSE: MIT
+### LICENSE
+
+[MIT](https://github.com/prateekkumarweb/timetableiith/blob/master/LICENSE)
+
+---
+Copyright &copy; 2017 Prateek Kumar
