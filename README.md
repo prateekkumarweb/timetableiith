@@ -14,7 +14,7 @@ NodeJS app to generate Timetable in ICal format.
   $ npm install
   ```
 * Edit the files `slots.yaml`, `courses.yaml` and `segments.json`.
-  Note that `segments.yaml` is of this format:
+  Note that `segments.yaml` is of the following format:
   ```json
   [
     ["segment1 start date", "segement1 end date"],
@@ -27,10 +27,11 @@ NodeJS app to generate Timetable in ICal format.
   ```
 * Run the program
   ```sh
-  $ node index.js
+  $ node index.js filename.ical
   ```
+  If `filename.ical` is not specified then `tt.ical` is generated.
 
-This creates a `tt.ical` file which can be imported into [Google Calendar](https://support.google.com/calendar/answer/37118?hl=en). Instead of importing you can host this file and keep Google Calendar in sync with it.
+The generated ICal file can be imported into [Google Calendar](https://support.google.com/calendar/answer/37118?hl=en) or [Microsoft Outlook](https://support.office.com/en-us/article/Import-or-subscribe-to-a-calendar-in-Outlook-com-cff1429c-5af6-41ec-a5b4-74f2c278e98c). Instead of importing you can also host this file and keep Google Calendar or Microsoft Outlook in sync with it.
 
 ### How to keep the ICal file in sync with Google Calendar
 
@@ -38,6 +39,7 @@ This creates a `tt.ical` file which can be imported into [Google Calendar](https
 * Next, in Google Calendar, click the **+** button below the overview month calendar and select **From URL**.
 * Enter the URL of the hosted ical file and add the calendar.
 * This will update the calendar whenever a change is made by pushing changes to the repository.
+* Note that it may take upto 24 hours for Google Calendar to update the events from the hosted iCal file.
 
 
 ### Add pre-commit to Git so that `tt.ical` can be generated before committing
