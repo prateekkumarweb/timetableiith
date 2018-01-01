@@ -60,4 +60,4 @@ This creates a `tt.ical` file which can be imported into [Google Calendar](https
 [MIT](https://github.com/prateekkumarweb/timetableiith/blob/master/LICENSE)
 
 ---
-Copyright &copy; 2017 Prateek Kumar
+Copyright &copy; 2017-2018 Prateek Kumar

@@ -56,7 +56,7 @@ Object.keys(courses).forEach((id)=>{
 
 			// Create the event with repeating weekly until last date
 			cal.createEvent({
-				uid: id+"_"+lastDate.getFullYear()+"_"+i+"_"+course.slot+"_"+day.substring(0,2),
+				uid: id+'_'+lastDate.getFullYear()+'_'+i+'_'+course.slot+'_'+day.substring(0,2),
 				start: times[0],
 				end: times[1],
 				summary: id+': '+course.name,
@@ -70,8 +70,11 @@ Object.keys(courses).forEach((id)=>{
 	}
 }, cal)
 
+let ttFile = 'tt.ical'
+if (process.argv.length > 2) ttFile = process.argv[2]
+
 // Save the calendar in the iCal format
-cal.save('tt.ical', (err)=>{
+cal.save(ttFile, (err)=>{
 	if (err) console.log(err)
-	else console.log('Created Timetable')
+	else console.log('Created Timetable at '+ttFile)
 })
