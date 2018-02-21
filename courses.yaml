@@ -23,11 +23,6 @@ CS5333:
   slot: S2
   classroom: 317
   segment: 16
-CS5350:
-  name: Bayesian Data Analysis
-  slot: S1
-  classroom: 317
-  segment: 16
 CS5480:
   name: Deep Learning
   slot: Q
