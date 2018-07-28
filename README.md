@@ -13,7 +13,7 @@ NodeJS app to generate Timetable in ICal format.
   ```sh
   $ npm install
   ```
-* Edit the files `slots.yaml`, `courses.yaml` and `segments.json`.
+* Edit the files `slots.yaml`, `courses.yaml`, `segments.json` and `holidays.json`.
   Note that `segments.yaml` is of the following format:
   ```json
   [

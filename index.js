@@ -8,11 +8,12 @@ cal.prodId('//IIT Hyderabad//Timetable Generator//EN')
 cal.timezone('Asia/Kolkata')
 cal.ttl(60)
 
-// Load slots, courses and segments
+// Load slots, courses, segments and holidays
 const yaml = require('yamljs')
 const slots = yaml.load('slots.yaml')
 const courses = yaml.load('courses.yaml')
 const segments = require('./segments.json')
+const holidays = require('./holidays.json').map((s)=>{return new Date(s)})
 
 // Function to find start and end date time
 // First find the next date on or after given @date
@@ -63,7 +64,8 @@ Object.keys(courses).forEach((id)=>{
 				location: 'CL No. '+course.classroom,
 				repeating: {
 					freq: 'WEEKLY',
-					until: lastDate
+					until: lastDate,
+					exclude: holidays
 				}
 			})
 		})

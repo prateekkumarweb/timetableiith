@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/prateekkumarweb/timetableiith#readme",
   "dependencies": {
-    "ical-generator": "^0.2.10",
+    "ical-generator": "^1.0.2",
     "yamljs": "^0.3.0"
   }
 }

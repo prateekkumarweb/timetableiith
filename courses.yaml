@@ -1,40 +1,25 @@
-CS3543:
-  name: Computer Networks II
-  slot: B
-  classroom: 119
-  segment: 16
-CS3563:
-  name: Introduction to DBMS II
-  slot: E
-  classroom: 119
-  segment: 16
-CS5110:
-  name: Complexity Theory
-  slot: R
-  classroom: 317
-  segment: 16
-CS5260:
-  name: Compiler Optimizations
-  slot: A
-  classroom: 317
-  segment: 16
-CS5333:
-  name: Computer and Network Security
-  slot: S2
-  classroom: 317
-  segment: 16
-CS5480:
-  name: Deep Learning
+CS5120:
+  name: Probability in Computing
   slot: Q
-  classroom: 119
+  classroom: A-117
   segment: 16
-CS6200:
-  name: Advanced Topics in Formal Methods
+CS5320:
+  name: Distributed Computing
   slot: S
-  classroom: 317
+  classroom: A-117
   segment: 16
-CS6410:
-  name: Software Verification
+CS5570:
+  name: Algebra for Computer Science
+  slot: P
+  classroom: C-LH1
+  segment: 16
+CS6250:
+  name: Advanced Compiler Optimizations
+  slot: B
+  classroom: A-114
+  segment: 16
+CS5030:
+  name: Topics in Theoretical Computer Science
   slot: F
-  classroom: 212
+  classroom: A-114
   segment: 16
