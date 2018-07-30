@@ -26,8 +26,8 @@ let findStartAndEndTime = (date, day, times) => {
 	let start = times[0].split(':')
 	let end = times[1].split(':')
 	return [
-		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(start[0]), Number(start[1]), 0, 0),
-		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(end[0]), Number(end[1]), 0, 0)
+		new Date(new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(start[0]), Number(start[1]), 0, 0) - 330*60000),
+		new Date(new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(end[0]), Number(end[1]), 0, 0) - 330*60000)
 	]
 }
 
