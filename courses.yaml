@@ -23,3 +23,8 @@ CS5030:
   slot: F
   classroom: A-114
   segment: 16
+CS5560:
+  name: Probabilistic Models for Machine Learning
+  slot: C
+  classroom: A-114
+  segment: 16
