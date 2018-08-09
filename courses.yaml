@@ -3,11 +3,6 @@ CS5120:
   slot: Q
   classroom: A-117
   segment: 16
-CS5320:
-  name: Distributed Computing
-  slot: S
-  classroom: A-117
-  segment: 16
 CS5570:
   name: Algebra for Computer Science
   slot: P
@@ -21,20 +16,10 @@ CS6250:
 CS5030:
   name: Topics in Theoretical Computer Science
   slot: F
-  classroom: A-114
+  classroom: A-118
   segment: 16
 CS5560:
   name: Probabilistic Models for Machine Learning
   slot: C
   classroom: A-114
-  segment: 16
-CS6370:
-  name: Information Retrieval
-  slot: R
-  classroom: A-117
-  segment: 16
-CS5553:
-  name: Wireless Networks & Security
-  slot: D
-  classroom: A-117
   segment: 16
