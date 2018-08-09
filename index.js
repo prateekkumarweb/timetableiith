@@ -2,7 +2,7 @@ const ical = require('ical-generator')
 
 // Calendar object initialization
 const cal = ical()
-cal.domain('iith.ac.in')
+cal.domain('iith.prateekkumar.in')
 cal.name('Timetable @ IITH')
 cal.prodId('//IIT Hyderabad//Timetable Generator//EN')
 cal.timezone('Asia/Kolkata')
@@ -72,7 +72,7 @@ Object.keys(courses).forEach((id)=>{
 	}
 }, cal)
 
-let ttFile = 'tt.ical'
+let ttFile = 'tt.ics'
 if (process.argv.length > 2) ttFile = process.argv[2]
 
 // Save the calendar in the iCal format

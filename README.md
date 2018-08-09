@@ -27,9 +27,9 @@ NodeJS app to generate Timetable in ICal format.
   ```
 * Run the program
   ```sh
-  $ node index.js filename.ical
+  $ node index.js filename.ics
   ```
-  If `filename.ical` is not specified then `tt.ical` is generated.
+  If `filename.ics` is not specified then `tt.ics` is generated.
 
 The generated ICal file can be imported into [Google Calendar](https://support.google.com/calendar/answer/37118?hl=en) or [Microsoft Outlook](https://support.office.com/en-us/article/Import-or-subscribe-to-a-calendar-in-Outlook-com-cff1429c-5af6-41ec-a5b4-74f2c278e98c). Instead of importing you can also host this file and keep Google Calendar or Microsoft Outlook in sync with it.
 
@@ -37,24 +37,24 @@ The generated ICal file can be imported into [Google Calendar](https://support.g
 
 * Fork this repository, make required changes and host the site using github pages.
 * Next, in Google Calendar, click the **+** button below the overview month calendar and select **From URL**.
-* Enter the URL of the hosted ical file and add the calendar.
+* Enter the URL of the hosted ics file and add the calendar.
 * This will update the calendar whenever a change is made by pushing changes to the repository.
 * Note that it may take upto 24 hours for Google Calendar to update the events from the hosted iCal file.
 
 
-### Add pre-commit to Git so that `tt.ical` can be generated before committing
+### Add pre-commit to Git so that `tt.ics` can be generated before committing
 
 * Create a new file at `.git/hooks/pre-commit` with following content.
   ```sh
   #!/bin/sh
   node index.js
-  git add tt.ical
+  git add tt.ics
   ```
 * Change persimissions of the hook file.
   ```sh
   $ chmod +x .git/hooks/pre-commit
   ```
-* After you commit, `tt.ical` will be auto generated and added to git.
+* After you commit, `tt.ics` will be auto generated and added to git.
 
 ---
 ### LICENSE
