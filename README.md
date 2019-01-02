@@ -62,4 +62,4 @@ The generated ICal file can be imported into [Google Calendar](https://support.g
 [MIT](https://github.com/prateekkumarweb/timetableiith/blob/master/LICENSE)
 
 ---
-Copyright &copy; 2017-2018 Prateek Kumar
+Copyright &copy; 2017-2019 Prateek Kumar
