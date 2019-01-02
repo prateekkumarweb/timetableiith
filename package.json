@@ -4,13 +4,15 @@
   "description": "Timetable @ IITH",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "watch-build": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prateekkumarweb/timetableiith.git"
   },
-  "author": "Prateek Kumar",
+  "author": "Prateek Kumar <prateek@prateekkumar.in> (https://prateekkumar.in)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/prateekkumarweb/timetableiith/issues"
@@ -19,5 +21,9 @@
   "dependencies": {
     "ical-generator": "^1.3.0",
     "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "typescript": "^3.2.2"
   }
 }

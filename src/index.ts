@@ -10,24 +10,24 @@ cal.ttl(60)
 
 // Load slots, courses, segments and holidays
 const yaml = require('yamljs')
-const slots = yaml.load('slots.yaml')
-const courses = yaml.load('courses.yaml')
-const segments = require('./segments.json')
-const holidays = require('./holidays.json').map((s)=>{return new Date(s)})
+const slots = yaml.load('../config/slots.yaml')
+const courses = yaml.load('../config/courses.yaml')
+const segments = require('../config/segments.json')
+const holidays = require('../config/holidays.json').map((s: string)=>{return new Date(s)})
 
 // Function to find start and end date time
 // First find the next date on or after given @date
 // whose day is @day
 // Next Generate two date objects with given @times
-let findStartAndEndTime = (date, day, times) => {
-	date = new Date(date)
-	day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursady', 'Friday', 'Saturday'].indexOf(day)
+let findStartAndEndTime = (date_str: string, day_str: string, times: any[]) => {
+	let date = new Date(date_str)
+	let day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursady', 'Friday', 'Saturday'].indexOf(day_str)
 	date.setDate(date.getDate() + (day+7-date.getDay())%7)
 	let start = times[0].split(':')
 	let end = times[1].split(':')
 	return [
-		new Date(new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(start[0]), Number(start[1]), 0, 0) - 330*60000),
-		new Date(new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(end[0]), Number(end[1]), 0, 0) - 330*60000)
+		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(start[0]), Number(start[1]), 0, 0),
+		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(end[0]), Number(end[1]), 0, 0)
 	]
 }
 
@@ -72,11 +72,11 @@ Object.keys(courses).forEach((id)=>{
 	}
 }, cal)
 
-let ttFile = 'tt.ics'
+let ttFile = '../out/tt.ics'
 if (process.argv.length > 2) ttFile = process.argv[2]
 
 // Save the calendar in the iCal format
-cal.save(ttFile, (err)=>{
+cal.save(ttFile, (err: any)=>{
 	if (err) console.log(err)
 	else console.log('Created Timetable at '+ttFile)
 })
