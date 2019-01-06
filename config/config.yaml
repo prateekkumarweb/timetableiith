@@ -1,0 +1,101 @@
+courses:
+  - code: CS4443
+    name: Software Engineering
+    slot: E
+    segment: 16
+    classroom: C-LH5
+  - code: CS5200
+    name: Approximation Algorithms
+    slot: R
+    segment: 16
+    classroom: A-117
+  - code: CS6300
+    name: Topics in Compiler Optimizations
+    segment: 16
+    slot:
+      Monday: [11:00, 11:55]
+      Wednesday: [10:00, 10:55]
+      Friday: [11:00, 11:55]
+    classroom: C-LH5
+  - code: ID4006
+    name: Ethics and Values
+    segment: 16
+    slot: S
+    classroom: A-Auditorium
+  - code: MA6040
+    name: Fuzzy Logic Connectives - Theory and Applications
+    segment: 16
+    slot: P
+    classroom: A-111
+
+segments:
+  - start: 02 Jan 2019
+    end: 16 Jan 2019
+  - start: 17 Jan 2019
+    end: 01 Feb 2019
+  - start: 07 Feb 2019
+    end: 22 Feb 2019
+  - start: 25 Feb 2019
+    end: 11 Mar 2019
+  - start: 25 Mar 2019
+    end: 09 Apr 2019
+  - start: 10 Apr 2019
+    end: 26 Apr 2019
+
+holidays:
+  - 17 Apr 2019 00:00 +0530 
+  - 19 Apr 2019 00:00 +0530
+
+slots:
+  A:
+    Monday: [9:00, 9:55]
+    Wednesday: [11:00, 11:55]
+    Thursady: [10:00, 10:55]
+  B:
+    Monday: [10:00, 10:55]
+    Wednesday: [9:00, 9:55]
+    Thursady: [11:00, 11:55]
+  C:
+    Monday: [11:00, 11:55]
+    Wednesday: [10:00, 10:55]
+    Thursady: [9:00, 9:55]
+  D:
+    Monday: [12:00, 12:55]
+    Tuesday: [9:00, 9:55]
+    Friday: [11:00, 11:55]
+  E:
+    Tuesday: [10:00, 10:55]
+    Thursady: [12:00, 12:55]
+    Friday: [9:00, 9:55]
+  F:
+    Tuesday: [11:00, 11:55]
+    Wednesday: [14:30, 15:25]
+    Friday: [10:00, 10:55]
+  G:
+    Tuesday: [12:00, 12:55]
+    Wednesday: [12:00, 12:55]
+    Friday: [12:00, 12:55]
+  P:
+    Monday: [14:30, 15:55]
+    Thursady: [16:00, 17:25]
+  Q:
+    Monday: [16:00, 17:25]
+    Thursady: [14:30, 15:55]
+  R:
+    Tuesday: [14:30, 15:55]
+    Friday: [16:00, 17:25]
+  S:
+    Tuesday: [16:00, 17:25]
+    Friday: [14:30, 15:55]
+  W:
+    Monday: [17:30, 18:55]
+    Thursady: [17:30, 18:55]
+  X:
+    Monday: [19:00, 20:25]
+    Thursady: [19:00, 20:25]
+  Y:
+    Tuesday: [17:30, 18:55]
+    Friday: [17:30, 18:55]
+  Z:
+    Tuesday: [19:00, 20:25]
+    Friday: [19:00, 20:25]
