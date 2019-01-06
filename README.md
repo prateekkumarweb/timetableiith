@@ -1,6 +1,6 @@
 # Timetable @ IITH
 
-NodeJS app to generate Timetable in ICal format.
+TypeScript (NodeJS) app to generate Timetable in ICal format.
 
 ## How to use
 
@@ -11,27 +11,21 @@ NodeJS app to generate Timetable in ICal format.
   ```
 * Install the required packages
   ```sh
-  $ npm install
+  $ yarn install
   ```
-* Edit the files `slots.yaml`, `courses.yaml`, `segments.json` and `holidays.json`.
-  Note that `segments.yaml` is of the following format:
-  ```json
-  [
-    ["segment1 start date", "segement1 end date"],
-    ["segment2 start date", "segement2 end date"],
-    ["segment3 start date", "segement3 end date"],
-    ["segment4 start date", "segement4 end date"],
-    ["segment5 start date", "segement5 end date"],
-    ["segment6 start date", "segement6 end date"]
-  ]
+* Edit the files `config.yaml` file. An example is given in `config` folder.
+* Generate JS files
+  ```sh
+  $ yarn build
   ```
 * Run the program
   ```sh
-  $ node index.js filename.ics
+  $ cd dist
+  $ node index.js -c config.yaml -o filename.ics
   ```
-  If `filename.ics` is not specified then `tt.ics` is generated.
 
-The generated ICal file can be imported into [Google Calendar](https://support.google.com/calendar/answer/37118?hl=en) or [Microsoft Outlook](https://support.office.com/en-us/article/Import-or-subscribe-to-a-calendar-in-Outlook-com-cff1429c-5af6-41ec-a5b4-74f2c278e98c). Instead of importing you can also host this file and keep Google Calendar or Microsoft Outlook in sync with it.
+The generated ICal file can be imported into [Google Calendar](https://support.google.com/calendar/answer/37118?hl=en) or [Microsoft Outlook](https://support.office.com/en-us/article/Import-or-subscribe-to-a-calendar-in-Outlook-com-cff1429c-5af6-41ec-a5b4-74f2c278e98c).
+Instead of importing you can also host this file and keep Google Calendar or Microsoft Outlook in sync with it.
 
 ### How to keep the ICal file in sync with Google Calendar
 
@@ -47,7 +41,9 @@ The generated ICal file can be imported into [Google Calendar](https://support.g
 * Create a new file at `.git/hooks/pre-commit` with following content.
   ```sh
   #!/bin/sh
-  node index.js
+  yarn build
+  cd dist
+  node index.js -c ../config/config.yaml -o ../out/tt.ics
   git add tt.ics
   ```
 * Change persimissions of the hook file.
