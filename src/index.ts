@@ -12,7 +12,7 @@ parser.addArgument(['-o', '--output'], {
 
 const args = parser.parseArgs()
 
-
+const moment = require('moment')
 const ical = require('ical-generator')
 
 // Calendar object initialization
@@ -38,8 +38,8 @@ let findStartAndEndTime = (date_str: string, day_str: string, times: any[]) => {
 	let start = times[0].split(':')
 	let end = times[1].split(':')
 	return [
-		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(start[0]), Number(start[1]), 0, 0),
-		new Date(date.getFullYear(), date.getMonth(), date.getDate(), Number(end[0]), Number(end[1]), 0, 0)
+		moment([date.getFullYear(), date.getMonth(), date.getDate(), Number(start[0]), Number(start[1]), 0, 0]),
+		moment([date.getFullYear(), date.getMonth(), date.getDate(), Number(end[0]), Number(end[1]), 0, 0])
 	]
 }
 
@@ -85,7 +85,8 @@ Object.keys(config.courses).forEach((id)=>{
 					freq: 'WEEKLY',
 					until: lastDate,
 					exclude: config.holidays
-				}
+				},
+				floating: true
 			})
 		})
 	}

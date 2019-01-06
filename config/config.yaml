@@ -1,13 +1,13 @@
 courses:
   - code: CS4443
     name: Software Engineering
-    slot: E
     segment: 16
+    slot: E
     classroom: C-LH5
   - code: CS5200
     name: Approximation Algorithms
-    slot: R
     segment: 16
+    slot: R
     classroom: A-117
   - code: CS6300
     name: Topics in Compiler Optimizations
@@ -19,7 +19,7 @@ courses:
     classroom: C-LH5
   - code: ID4006
     name: Ethics and Values
-    segment: 16
+    segment: 34
     slot: S
     classroom: A-Auditorium
   - code: MA6040
