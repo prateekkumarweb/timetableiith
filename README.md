@@ -1,4 +1,4 @@
-# Timetable @ IITH
+# Timetable @ IIT Hyderabad
 
 TypeScript (NodeJS) app to generate Timetable in ICal format.
 
